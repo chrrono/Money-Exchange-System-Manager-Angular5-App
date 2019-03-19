@@ -1,0 +1,28 @@
+<h4>Transakcje </h4>
+      <div style="height:500px;overflow-y:scroll;">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Typ</th>
+              <th scope="col">Czas</th>
+              <th scope="col">Waluta</th>
+              <th scope="col">Ilosc Waluty</th>
+              <th scope="col">kurs</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let transaction of transactionsList" [ngClass]="{
+              'bg-danger': transaction.type == 'Sell',
+              'bg-success' : transaction.type == 'Buy'
+              }">
+                <td>{{transaction.id}}</td>
+                <td>{{transaction.type}}</td>
+                <td>{{transaction.time}}</td>
+                <td>{{transaction.currency}}</td>
+                <td>{{transaction.amountOfCurrency}}</td>
+                <td>{{transaction.rateOfExchange}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div> 

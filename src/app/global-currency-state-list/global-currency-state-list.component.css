@@ -1,0 +1,5 @@
+
+.my_table tbody tr:hover {
+   background-color: #7fccee; /*--- this is a blue color when hover ---*/
+}
+

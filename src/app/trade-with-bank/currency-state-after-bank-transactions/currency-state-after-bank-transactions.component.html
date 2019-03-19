@@ -1,0 +1,15 @@
+<h4>Stan Waluty </h4>
+<table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Nazwa</th>
+        <th scope="col">Waluta</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr tabindex="0" *ngFor="let state of globalCurrencyStateAfterBankTransactionList; let i = index">
+          <td>{{state.currency}}</td>
+          <td>{{state.currencyState}}</td>
+      </tr>
+    </tbody>
+</table>

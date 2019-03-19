@@ -1,0 +1,19 @@
+<h4>Stan Waluty </h4>
+<table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Nazwa</th>
+        <th scope="col">Waluta</th>
+        <th scope="col">Zlotowki</th>
+        <th scope="col">Srednia</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let state of cashRegisterStateList; let i = index">
+          <td>{{state.currency}}</td>
+          <td>{{state.currencyState}}</td>
+          <td>{{state.zloteState}}</td>
+          <td>{{state.averageRateExchange}}</td>
+      </tr>
+    </tbody>
+</table>

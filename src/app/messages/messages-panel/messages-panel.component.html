@@ -1,0 +1,18 @@
+<div style="height:500px;overflow-y:scroll;">
+    <div *ngFor="let message of messages">
+    <div  [ngClass]="{
+          'alert' : true,
+          'alert-success': message.receiver !== 'Biuro',
+          'alert-info' : message.receiver == 'Biuro'
+          }" [ngStyle]="{
+          'Float' : 'left',
+          'margin-left' :  message.receiver == 'Biuro' ? '0%' : '20%',
+          'margin-right' :  message.receiver == 'Biuro' ? '20%' : '0%'
+          }">
+  
+      <p> Czas: {{ message.time }}</p>
+      <p> {{ message.content }} </p>
+      <p> Nadawca : {{ message.sender }} </p>
+      </div>
+    </div>
+</div>

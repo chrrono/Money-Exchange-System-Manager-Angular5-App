@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12 my_table">
+      <h4>Stan Waluty </h4>
+      <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Nazwa</th>
+              <th scope="col">Waluta</th>
+              <th scope="col">Zlotowki</th>
+              <th scope="col">Srednia</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr tabindex="0" *ngFor="let state of globalCurrencyStateList; let i = index">
+                <td>{{state.currency}}</td>
+                <td>{{state.currencyState}}</td>
+                <td>{{state.zloteState}}</td>
+                <td>{{state.averageRateExchange}}</td>
+            </tr>
+          </tbody>
+      </table>
+    </div>
+  </div>
+</div>
